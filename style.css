@@ -1,0 +1,14 @@
+body {
+  background-image: url();
+}
+.holdSpace {
+  display: inline-flex;
+  flex-wrap: wrap;
+  border: 5px solid gray;
+  background-color: #2a4f6e;
+  height: 15px;
+  width: 15px;
+  margin: 1px;
+  padding: 2%;
+  position: relative;
+}
