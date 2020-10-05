@@ -30,12 +30,9 @@ let battleShip = {
     buildShips: function () {
         console.log(battleShip.board)
         console.log(battleShip.board[0], [1], [2])
-
-
     }
 
     //randomize the ships
-    //fire missles through an event listener
 
 }
 battleShip.getSpaces()

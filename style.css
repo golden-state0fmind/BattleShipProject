@@ -1,5 +1,8 @@
 body {
-  background-image: url();
+  background-image: url(images/e68_1.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 .holdSpace {
   display: inline-flex;
