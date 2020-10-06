@@ -4,7 +4,7 @@ let grid = document.querySelector('.container')
 // adding an input field to register fire missle coordinates
 let form = document.querySelector('form')
 let inputGuess = document.querySelector('input')
-console.log(inputGuess)
+
 
 
 let battleShip = {
@@ -19,7 +19,6 @@ let battleShip = {
                 space.setAttribute('class', 'holdSpace')
                 space.setAttribute('value', `${i}-${j}`)
                 grid.appendChild(space)
-                space.addEventListener('click', this.fireMissle)
                 temp.push(space)
             }
             this.board.push(temp)
@@ -27,15 +26,17 @@ let battleShip = {
     },
     // select and listen to the space and check to see if the space is a ship or empty 
     fireMissle: function (e) {
-        if (e.target.className === 'ship') {
+        e.preventDefault()// prevents the form from leaving the page
+        // the form returns an array so access the array 
+        if (e.target[0].value === '0-1') {
+            //console.log('i am a hit')
             e.target.style.opacity = 0.3
             alert('HIT: Ship Sunk!!')
         } else {
+            //console.log('missed target')
             alert('Missed Target!!')
             e.target.style.opacity = .2
-            e.preventDefault()
         }
-        e.preventDefault() // prevents the form from leaving the page
     },
     // add image or access the value of the ship to compare true(hit) or false(missed) create ships and place in array then try to hit that space to return true
     buildShips: function () {
@@ -44,11 +45,9 @@ let battleShip = {
         battleShip.board[0][2].setAttribute('class', 'ship')
         //console.log(battleShip.board[0][0], [0][1], [0][2])
     },
-
-
 }
 // listening for an input to compare coordinates on our grid
-form.addEventListener('', battleShip.fireMissle)
+form.addEventListener('submit', battleShip.fireMissle)
 battleShip.getSpaces()
 battleShip.buildShips()
 //console.log(battleShip.board[0][0])
