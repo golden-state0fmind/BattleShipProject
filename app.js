@@ -27,12 +27,13 @@ let battleShip = {
     },
     // select and listen to the space and check to see if the space is a ship or empty 
     fireMissle: function (e) {
-        if (e.target.value === form.value) {
+        if (e.target.className === 'ship') {
             e.target.style.opacity = 0.3
-            alert('Successful')
+            alert('HIT: Ship Sunk!!')
         } else {
-            alert('Missed!!')
+            alert('Missed Target!!')
             e.target.style.opacity = .2
+            e.preventDefault()
         }
         e.preventDefault() // prevents the form from leaving the page
     },
@@ -47,7 +48,7 @@ let battleShip = {
 
 }
 // listening for an input to compare coordinates on our grid
-form.addEventListener('submit', battleShip.fireMissle)
+form.addEventListener('', battleShip.fireMissle)
 battleShip.getSpaces()
 battleShip.buildShips()
 //console.log(battleShip.board[0][0])
