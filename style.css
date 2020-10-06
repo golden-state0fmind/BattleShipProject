@@ -15,3 +15,14 @@ body {
   padding: 2%;
   position: relative;
 }
+.ship {
+  display: inline-flex;
+  flex-wrap: wrap;
+  border: 5px solid gray;
+  background-color: #e11500;
+  height: 15px;
+  width: 15px;
+  margin: 1px;
+  padding: 2%;
+  position: relative;
+}
