@@ -28,14 +28,23 @@ let battleShip = {
     fireMissle: function (e) {
         e.preventDefault()// prevents the form from leaving the page
         // the form returns an array so access the array 
-        if (e.target[0].value === '0-1') {
+        if (e.target[0].value === '0-0') {
             //console.log('i am a hit')
-            e.target.style.opacity = 0.3
+            battleShip.board[0][0].style.opacity = 0.3
             alert('HIT: Ship Sunk!!')
+            inputGuess.value = ''
+        } else if (e.target[0].value === '0-1') {
+            battleShip.board[0][1].style.opacity = 0.3
+            alert('HIT: Ship Sunk!!')
+            inputGuess.value = ''
+        } else if (e.target[0].value === '0-2') {
+            battleShip.board[0][2].style.opacity = 0.3
+            alert('HIT: Ship Sunk!!')
+            inputGuess.value = ''
         } else {
             //console.log('missed target')
             alert('Missed Target!!')
-            e.target.style.opacity = .2
+            //e.target.style.opacity = .2
         }
     },
     // add image or access the value of the ship to compare true(hit) or false(missed) create ships and place in array then try to hit that space to return true
