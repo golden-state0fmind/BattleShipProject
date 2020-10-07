@@ -59,8 +59,13 @@ body {
   margin: 1px;
   padding: 2%;
   position: relative;
-  visibility: visible;
 }
+/* might not need
+.cpuShip:click {
+  border: 5px solid gray;
+  background-color: #2a4f6e;
+}
+*/
 .playerShip {
   display: inline-flex;
   flex-wrap: wrap;
@@ -73,6 +78,17 @@ body {
   position: relative;
 }
 .ocean {
+  display: inline-flex;
+  flex-wrap: wrap;
+  border: 5px solid gray;
+  background-color: #2a4f6e;
+  height: 15px;
+  width: 13px;
+  margin: 1px;
+  padding: 2%;
+  position: relative;
+}
+.miss {
   display: inline-flex;
   flex-wrap: wrap;
   border: 5px solid gray;
