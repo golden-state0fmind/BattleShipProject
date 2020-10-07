@@ -49,7 +49,19 @@ body {
   padding: 2%;
   position: relative;
 }
-.ship {
+.cpuShip {
+  display: inline-flex;
+  flex-wrap: wrap;
+  border: 5px solid gray;
+  background-color: #e11500;
+  height: 15px;
+  width: 13px;
+  margin: 1px;
+  padding: 2%;
+  position: relative;
+  visibility: visible;
+}
+.playerShip {
   display: inline-flex;
   flex-wrap: wrap;
   border: 5px solid gray;
