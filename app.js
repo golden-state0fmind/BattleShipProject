@@ -18,6 +18,7 @@ let battleShip = {
                 let space = document.createElement('div')
                 space.setAttribute('class', 'holdSpace')
                 space.setAttribute('value', `${i}-${j}`)
+                space.setAttribute('id', `${i}-${j}`)
                 grid.appendChild(space)
                 temp.push(space)
             }
@@ -41,10 +42,15 @@ let battleShip = {
             battleShip.board[0][2].style.opacity = 0.3
             alert('HIT: Ship Sunk!!')
             inputGuess.value = ''
-        } else {
+        } else if (e.target[0].value !== '') {
             //console.log('missed target')
             alert('Missed Target!!')
-            //e.target.style.opacity = .2
+            let space = e.target[0].value
+            let temp = `${i}-${j}`
+            console.log(temp)
+            space = document.getElementById('')
+            space.setAttribute('style', 'opacity:0.2')
+            inputGuess.value = ''
         }
     },
     // add image or access the value of the ship to compare true(hit) or false(missed) create ships and place in array then try to hit that space to return true
@@ -60,4 +66,5 @@ form.addEventListener('submit', battleShip.fireMissle)
 battleShip.getSpaces()
 battleShip.buildShips()
 //console.log(battleShip.board[0][0])
-console.log(inputGuess)
+//console.log(inputGuess)
+console.log(battleShip.board)
