@@ -6,7 +6,6 @@ let form = document.querySelector('form')
 let inputGuess = document.querySelector('input')
 
 
-
 let battleShip = {
     // store the ships in an Array
     board: [],
@@ -29,7 +28,11 @@ let battleShip = {
     fireMissle: function (e) {
         e.preventDefault()// prevents the form from leaving the page
         // the form returns an array so access the array 
-        if (e.target[0].value === '0-0') {
+        if (!e.target[0].value.includes('id')) {
+            //console.log('I am off the board')
+            alert('Please enter coordinates')
+            inputGuess.value = ''
+        } else if (e.target[0].value === '0-0') {
             //console.log('i am a hit')
             battleShip.board[0][0].style.opacity = 0.3
             alert('HIT: Ship Sunk!!')
@@ -87,7 +90,6 @@ let battleShip = {
         battleShip.board[6][8].setAttribute('class', 'ship')
         battleShip.board[7][8].setAttribute('class', 'ship')
         battleShip.board[8][8].setAttribute('class', 'ship')
-
         //console.log(battleShip.board[0][0], [0][1], [0][2])
     },
 }
@@ -95,6 +97,5 @@ let battleShip = {
 form.addEventListener('submit', battleShip.fireMissle)
 battleShip.getSpaces()
 battleShip.buildShips()
-//console.log(battleShip.board[0][0])
 //console.log(inputGuess)
-console.log(battleShip.board)
+//console.log(battleShip.board)
