@@ -42,11 +42,12 @@ let battleShip = {
         }
     },
     cpuMissle: function () {
+        console.log(this.playerGrid)
         console.log('i am random cpu guess')
         cpuGuess = battleShip.playerGrid[4][0]
         console.log(cpuGuess)
         if (cpuGuess) {
-            battleShip.playerGrid[4][0].setAttribute('class', 'ocean')
+            battleShip.playerGrid[4][0].setAttribute('class', 'miss')
             alert('Cpu Missed!! Players Turn')
         }
         console.log('almost')
@@ -63,45 +64,53 @@ let battleShip = {
         } else if (e.target[0].value === '0-0') {
             //console.log('i am a hit')
             battleShip.cpuGrid[0][0].style.opacity = 0.3
+            document.getElementById(e.target[0].value).setAttribute('class', 'cpuShip')
             alert('HIT: Ship Sunk!!')
             inputGuess.value = ''
         } else if (e.target[0].value === '0-1') {
             battleShip.cpuGrid[0][1].style.opacity = 0.3
+            document.getElementById(e.target[0].value).setAttribute('class', 'cpuShip')
             alert('HIT: Ship Sunk!!')
             inputGuess.value = ''
         } else if (e.target[0].value === '0-2') {
             battleShip.cpuGrid[0][2].style.opacity = 0.3
+            document.getElementById(e.target[0].value).setAttribute('class', 'cpuShip')
             alert('HIT: Ship Sunk!!')
             inputGuess.value = ''
         } else if (e.target[0].value === '4-8') {
             battleShip.cpuGrid[4][8].style.opacity = 0.3
+            document.getElementById(e.target[0].value).setAttribute('class', 'cpuShip')
             alert('HIT: Ship Sunk!!')
             inputGuess.value = ''
         }
         else if (e.target[0].value === '5-8') {
             battleShip.cpuGrid[5][8].style.opacity = 0.3
+            document.getElementById(e.target[0].value).setAttribute('class', 'cpuShip')
             alert('HIT: Ship Sunk!!')
             inputGuess.value = ''
         }
         else if (e.target[0].value === '6-8') {
             battleShip.cpuGrid[6][8].style.opacity = 0.3
+            document.getElementById(e.target[0].value).setAttribute('class', 'cpuShip')
             alert('HIT: Ship Sunk!!')
             inputGuess.value = ''
         }
         else if (e.target[0].value === '7-8') {
             battleShip.cpuGrid[7][8].style.opacity = 0.3
+            document.getElementById(e.target[0].value).setAttribute('class', 'cpuShip')
             alert('HIT: Ship Sunk!!')
             inputGuess.value = ''
         }
         else if (e.target[0].value === '8-8') {
             battleShip.cpuGrid[8][8].style.opacity = 0.3
+            document.getElementById(e.target[0].value).setAttribute('class', 'cpuShip')
             alert('HIT: Ship Sunk!!')
             inputGuess.value = ''
         }
         else if (e.target[0].value) {
             //console.log('missed target')
             alert('Missed Target!!')
-            document.getElementById(e.target[0].value).setAttribute('class', 'ocean')
+            document.getElementById(e.target[0].value).setAttribute('class', 'miss')
             inputGuess.value = ''
             battleShip.cpuMissle()
         }
@@ -109,15 +118,15 @@ let battleShip = {
     // add image or access the value of the ship to compare true(hit) or false(missed) create ships and place in array then try to hit that space to return true
     cpuShips: function () {
         //first ship on the CpuBoard near the top left
-        battleShip.cpuGrid[0][0].setAttribute('class', 'cpuShip')
-        battleShip.cpuGrid[0][1].setAttribute('class', 'cpuShip')
-        battleShip.cpuGrid[0][2].setAttribute('class', 'cpuShip')
+        battleShip.cpuGrid[0][0].setAttribute('class', 'ocean')
+        battleShip.cpuGrid[0][1].setAttribute('class', 'ocean')
+        battleShip.cpuGrid[0][2].setAttribute('class', 'ocean')
         //second ship along the bottom right edge
-        battleShip.cpuGrid[4][8].setAttribute('class', 'cpuShip')
-        battleShip.cpuGrid[5][8].setAttribute('class', 'cpuShip')
-        battleShip.cpuGrid[6][8].setAttribute('class', 'cpuShip')
-        battleShip.cpuGrid[7][8].setAttribute('class', 'cpuShip')
-        battleShip.cpuGrid[8][8].setAttribute('class', 'cpuShip')
+        battleShip.cpuGrid[4][8].setAttribute('class', 'ocean')
+        battleShip.cpuGrid[5][8].setAttribute('class', 'ocean')
+        battleShip.cpuGrid[6][8].setAttribute('class', 'ocean')
+        battleShip.cpuGrid[7][8].setAttribute('class', 'ocean')
+        battleShip.cpuGrid[8][8].setAttribute('class', 'ocean')
         //console.log(battleShip.board[0][0], [0][1], [0][2])
     },
     playerShips: function () {
