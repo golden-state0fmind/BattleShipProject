@@ -6,15 +6,40 @@ body {
 }
 .container {
   display: flex;
+}
+.container1 {
+  display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
   max-width: 401px;
 }
-.holdSpace {
+.container2 {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  max-width: 401px;
+}
+.form {
+  display: flex;
+}
+.cpuSpace {
   display: inline-flex;
+  justify-content: flex-start;
   flex-wrap: wrap;
   border: 5px solid gray;
   background-color: #2a4f6e;
+  height: 15px;
+  width: 13px;
+  margin: 1px;
+  padding: 2%;
+  position: relative;
+}
+.playerSpace {
+  display: inline-flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  max-width: 401px;
+  border: 5px solid gray;
+  background-color: #3d6c96;
   height: 15px;
   width: 13px;
   margin: 1px;
@@ -32,7 +57,7 @@ body {
   padding: 2%;
   position: relative;
 }
-.shipSunk {
+.ocean {
   display: inline-flex;
   flex-wrap: wrap;
   border: 5px solid gray;
