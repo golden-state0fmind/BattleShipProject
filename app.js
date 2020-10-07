@@ -2,12 +2,12 @@ console.log('sanity check')
 // create a space to hold the ships 
 let board1 = document.querySelector('.container1')
 let board2 = document.querySelector('.container2')
-
 // adding an input field to register fire missle coordinates
 let form = document.querySelector('form')
 let inputGuess = document.querySelector('input')
-
-
+// start the game with truthy and falsy flow
+// need the cpu to involve turn and randomizeguess(numTostr) when invoked maybe function at the end of the players miss 
+// randomize cpu aim
 let battleShip = {
     // store the ships in an Array
     cpuGrid: [],
@@ -98,7 +98,7 @@ let battleShip = {
     },
     // add image or access the value of the ship to compare true(hit) or false(missed) create ships and place in array then try to hit that space to return true
     cpuShips: function () {
-        //first ship near the top left
+        //first ship on the CpuBoard near the top left
         battleShip.cpuGrid[0][0].setAttribute('class', 'ship')
         battleShip.cpuGrid[0][1].setAttribute('class', 'ship')
         battleShip.cpuGrid[0][2].setAttribute('class', 'ship')
@@ -110,11 +110,24 @@ let battleShip = {
         battleShip.cpuGrid[8][8].setAttribute('class', 'ship')
         //console.log(battleShip.board[0][0], [0][1], [0][2])
     },
+    playerShips: function () {
+        //first ship on the playerBoard 
+        battleShip.playerGrid[2][5].setAttribute('class', 'ship')
+        battleShip.playerGrid[2][6].setAttribute('class', 'ship')
+        battleShip.playerGrid[2][7].setAttribute('class', 'ship')
+        //second ship on the PlayerBoard
+        battleShip.playerGrid[4][1].setAttribute('class', 'ship')
+        battleShip.playerGrid[5][1].setAttribute('class', 'ship')
+        battleShip.playerGrid[6][1].setAttribute('class', 'ship')
+        battleShip.playerGrid[7][1].setAttribute('class', 'ship')
+        battleShip.playerGrid[8][1].setAttribute('class', 'ship')
+    }
 }
 // listening for an input to compare coordinates on our grid
 form.addEventListener('submit', battleShip.fireMissle)
 battleShip.cpuSpaces()
 battleShip.cpuShips()
 battleShip.playerSpaces()
+battleShip.playerShips()
 //console.log(inputGuess)
 //console.log(battleShip.board)
