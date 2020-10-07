@@ -42,7 +42,32 @@ let battleShip = {
             battleShip.board[0][2].style.opacity = 0.3
             alert('HIT: Ship Sunk!!')
             inputGuess.value = ''
-        } else if (e.target[0].value !== '0-0' && e.target[0].value !== '0-1' && e.target[0].value !== '0-2') {
+        } else if (e.target[0].value === '4-8') {
+            battleShip.board[4][8].style.opacity = 0.3
+            alert('HIT: Ship Sunk!!')
+            inputGuess.value = ''
+        }
+        else if (e.target[0].value === '5-8') {
+            battleShip.board[5][8].style.opacity = 0.3
+            alert('HIT: Ship Sunk!!')
+            inputGuess.value = ''
+        }
+        else if (e.target[0].value === '6-8') {
+            battleShip.board[6][8].style.opacity = 0.3
+            alert('HIT: Ship Sunk!!')
+            inputGuess.value = ''
+        }
+        else if (e.target[0].value === '7-8') {
+            battleShip.board[7][8].style.opacity = 0.3
+            alert('HIT: Ship Sunk!!')
+            inputGuess.value = ''
+        }
+        else if (e.target[0].value === '8-8') {
+            battleShip.board[8][8].style.opacity = 0.3
+            alert('HIT: Ship Sunk!!')
+            inputGuess.value = ''
+        }
+        else if (e.target[0].value) {
             //console.log('missed target')
             alert('Missed Target!!')
             let space = document.getElementById(e.target[0].value).setAttribute('class', 'shipSunk')
@@ -52,9 +77,17 @@ let battleShip = {
     },
     // add image or access the value of the ship to compare true(hit) or false(missed) create ships and place in array then try to hit that space to return true
     buildShips: function () {
+        //first ship near the top left
         battleShip.board[0][0].setAttribute('class', 'ship')
         battleShip.board[0][1].setAttribute('class', 'ship')
         battleShip.board[0][2].setAttribute('class', 'ship')
+        //second ship along the bottom right edge
+        battleShip.board[4][8].setAttribute('class', 'ship')
+        battleShip.board[5][8].setAttribute('class', 'ship')
+        battleShip.board[6][8].setAttribute('class', 'ship')
+        battleShip.board[7][8].setAttribute('class', 'ship')
+        battleShip.board[8][8].setAttribute('class', 'ship')
+
         //console.log(battleShip.board[0][0], [0][1], [0][2])
     },
 }
