@@ -6,6 +6,7 @@ body {
 }
 .container {
   display: flex;
+  justify-content: space-evenly;
 }
 .container1 {
   display: flex;
@@ -20,7 +21,9 @@ body {
 }
 .form {
   display: flex;
+  justify-content: flex-start;
 }
+/* need to hide the ships and when hit reveal*/
 .cpuSpace {
   display: inline-flex;
   justify-content: flex-start;
