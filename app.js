@@ -12,6 +12,7 @@ let battleShip = {
     // store the ships in an Array
     cpuGrid: [],
     playerGrid: [],
+    randomGuess: [],
     // generate the ships with values and classes
     cpuSpaces: function () {
         for (i = 0; i < 9; i++) {
@@ -39,18 +40,22 @@ let battleShip = {
                 player.push(playerSpace)
             }
             this.playerGrid.push(player)
+            this.randomGuess.push(player)
         }
     },
     cpuMissle: function () {
         console.log(this.playerGrid)
-        console.log('i am random cpu guess')
-        cpuGuess = battleShip.playerGrid[4][0]
-        console.log(cpuGuess)
+        randomRow = Math.floor(Math.random() * 8)
+        randomCol = Math.floor(Math.random() * 8)
+        //console.log(randomRow)
+        //console.log('i am random cpu guess')
+        cpuGuess = battleShip.playerGrid[randomRow][randomCol]
+        //console.log(cpuGuess)
         if (cpuGuess) {
-            battleShip.playerGrid[4][0].setAttribute('class', 'miss')
-            alert('Cpu Missed!! Players Turn')
+            battleShip.playerGrid[randomRow][randomCol].setAttribute('class', 'miss')
+            alert('CPU Missed!! Players Turn')
         }
-        console.log('almost')
+        //console.log('almost')
     },
     // select and listen to the space and check to see if the space is a ship or empty 
     fireMissle: function (e) {
@@ -65,51 +70,51 @@ let battleShip = {
             //console.log('i am a hit')
             battleShip.cpuGrid[0][0].style.opacity = 0.3
             document.getElementById(e.target[0].value).setAttribute('class', 'cpuShip')
-            alert('HIT: Ship Sunk!!')
+            alert('HIT: Go again!!')
             inputGuess.value = ''
         } else if (e.target[0].value === '0-1') {
             battleShip.cpuGrid[0][1].style.opacity = 0.3
             document.getElementById(e.target[0].value).setAttribute('class', 'cpuShip')
-            alert('HIT: Ship Sunk!!')
+            alert('HIT: Go again!!')
             inputGuess.value = ''
         } else if (e.target[0].value === '0-2') {
             battleShip.cpuGrid[0][2].style.opacity = 0.3
             document.getElementById(e.target[0].value).setAttribute('class', 'cpuShip')
-            alert('HIT: Ship Sunk!!')
+            alert('HIT: Go again!!')
             inputGuess.value = ''
         } else if (e.target[0].value === '4-8') {
             battleShip.cpuGrid[4][8].style.opacity = 0.3
             document.getElementById(e.target[0].value).setAttribute('class', 'cpuShip')
-            alert('HIT: Ship Sunk!!')
+            alert('HIT: Go again!!')
             inputGuess.value = ''
         }
         else if (e.target[0].value === '5-8') {
             battleShip.cpuGrid[5][8].style.opacity = 0.3
             document.getElementById(e.target[0].value).setAttribute('class', 'cpuShip')
-            alert('HIT: Ship Sunk!!')
+            alert('HIT: Go again!!')
             inputGuess.value = ''
         }
         else if (e.target[0].value === '6-8') {
             battleShip.cpuGrid[6][8].style.opacity = 0.3
             document.getElementById(e.target[0].value).setAttribute('class', 'cpuShip')
-            alert('HIT: Ship Sunk!!')
+            alert('HIT: Go again!!')
             inputGuess.value = ''
         }
         else if (e.target[0].value === '7-8') {
             battleShip.cpuGrid[7][8].style.opacity = 0.3
             document.getElementById(e.target[0].value).setAttribute('class', 'cpuShip')
-            alert('HIT: Ship Sunk!!')
+            alert('HIT: Go again!!')
             inputGuess.value = ''
         }
         else if (e.target[0].value === '8-8') {
             battleShip.cpuGrid[8][8].style.opacity = 0.3
             document.getElementById(e.target[0].value).setAttribute('class', 'cpuShip')
-            alert('HIT: Ship Sunk!!')
+            alert('HIT: Go again!!')
             inputGuess.value = ''
         }
         else if (e.target[0].value) {
             //console.log('missed target')
-            alert('Missed Target!!')
+            alert('Missed: CPU Turn!!')
             document.getElementById(e.target[0].value).setAttribute('class', 'miss')
             inputGuess.value = ''
             battleShip.cpuMissle()
