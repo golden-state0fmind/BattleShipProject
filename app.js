@@ -42,14 +42,11 @@ let battleShip = {
             battleShip.board[0][2].style.opacity = 0.3
             alert('HIT: Ship Sunk!!')
             inputGuess.value = ''
-        } else if (e.target[0].value !== '') {
+        } else if (e.target[0].value !== '0-0' && e.target[0].value !== '0-1' && e.target[0].value !== '0-2') {
             //console.log('missed target')
             alert('Missed Target!!')
-            let space = e.target[0].value
-            let temp = `${i}-${j}`
-            console.log(temp)
-            space = document.getElementById('')
-            space.setAttribute('style', 'opacity:0.2')
+            let space = document.getElementById(e.target[0].value).setAttribute('class', 'shipSunk')
+            console.log(space)
             inputGuess.value = ''
         }
     },
