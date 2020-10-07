@@ -33,5 +33,14 @@ body {
   position: relative;
 }
 .shipSunk {
+  display: inline-flex;
+  flex-wrap: wrap;
+  border: 5px solid gray;
+  background-color: #2a4f6e;
+  height: 15px;
+  width: 13px;
+  margin: 1px;
+  padding: 2%;
+  position: relative;
   opacity: 0.2;
 }
