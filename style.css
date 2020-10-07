@@ -1,5 +1,5 @@
 body {
-  background-image: url(images/e68_1.png);
+  background-image: url(images/photo-1572314997669-275cf96124fc.jpeg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -31,4 +31,7 @@ body {
   margin: 1px;
   padding: 2%;
   position: relative;
+}
+.shipSunk {
+  opacity: 0.2;
 }
