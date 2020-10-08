@@ -23,6 +23,16 @@ body {
 .form {
   display: flex;
   justify-content: flex-start;
+  padding-top: 1%;
+  padding-left: 9.75%;
+}
+.input {
+  border: 5px solid #ff0000;
+}
+.fireBtn {
+  font-weight: bold;
+  background-color: #fff8e7;
+  border: 5px solid #7b4400;
 }
 /* need to hide the ships and when hit reveal*/
 .cpuSpace {
@@ -102,6 +112,7 @@ body {
   text-align: center;
   font-size: 25px;
   background-color: #fff8e7;
+  padding: 1%;
 }
 .playertitle {
   border: 5px solid #7b4400;
@@ -111,4 +122,5 @@ body {
   text-align: center;
   font-size: 25px;
   background-color: #fff8e7;
+  padding: 1%;
 }
