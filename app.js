@@ -50,13 +50,14 @@ let battleShip = {
         if (battleShip.playerGrid[randomRow][randomCol].getAttribute('class') === 'playerShip') {
             battleShip.playerGrid[randomRow][randomCol].style.opacity = 0.3
             alert('HIT!! CPU Go Again')
-            //console.log('This is a ship; fire again')
+            //console.log('This is a ship;', battleShip.playerGrid[randomRow][randomCol])
             this.cpuMissle()
         } else if (battleShip.playerGrid[randomRow][randomCol].getAttribute('class') === 'miss') {
             alert('CPU Missed: Players Turn')
             //console.log('missed target for cpu')
         } else {
             battleShip.playerGrid[randomRow][randomCol].style.opacity = 0.3
+            alert('CPU Missed: Players Turn')
         }
     },
     // select and listen to the space and check to see if the space is a ship or empty 
