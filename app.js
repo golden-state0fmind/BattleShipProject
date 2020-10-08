@@ -19,6 +19,7 @@ let battleShip = {
                 cpuSpace.setAttribute('class', 'cpuSpace')
                 cpuSpace.setAttribute('value', `${i}-${j}`)
                 cpuSpace.setAttribute('id', `${i}-${j}`)
+                cpuSpace.innerHTML = `${i}-${j}`
                 board1.appendChild(cpuSpace)
                 cpu.push(cpuSpace)
             }
@@ -33,6 +34,7 @@ let battleShip = {
                 playerSpace.setAttribute('class', 'playerSpace')
                 playerSpace.setAttribute('value', `${x}-${y}`)
                 playerSpace.setAttribute('id', `${x}-${y}`)
+                playerSpace.innerHTML = `${x}-${y}`
                 board2.appendChild(playerSpace)
                 player.push(playerSpace)
             }
