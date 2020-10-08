@@ -5,9 +5,7 @@ let board2 = document.querySelector('.container2')
 // adding an input field to register fire missle coordinates
 let form = document.querySelector('form')
 let inputGuess = document.querySelector('input')
-// start the game with truthy and falsy flow
-// need the cpu to involve turn and randomizeguess(numTostr) when invoked maybe function at the end of the players miss 
-// randomize cpu aim
+// need the cpu to involve turn and randomizeguess when invoked maybe function at the end of the players miss 
 let battleShip = {
     // store the ships in an Array
     cpuGrid: [],
@@ -42,17 +40,24 @@ let battleShip = {
         }
     },
     cpuMissle: function () {
+        // randomize cpu aim
         randomRow = Math.floor(Math.random() * 8)
         randomCol = Math.floor(Math.random() * 8)
         //console.log(randomRow)
         //console.log('i am random cpu guess')
-        cpuGuess = battleShip.playerGrid[randomRow][randomCol]
-        //console.log(cpuGuess)
-        if (cpuGuess) {
-            battleShip.playerGrid[randomRow][randomCol].setAttribute('class', 'miss')
-            alert('CPU Missed!! Players Turn')
+        //cpuGuess = battleShip.playerGrid[randomRow][randomCol]
+        //console.log(battleShip.playerGrid[randomRow][randomCol].getAttribute('class'))
+        if (battleShip.playerGrid[randomRow][randomCol].getAttribute('class') === 'playerShip') {
+            battleShip.playerGrid[randomRow][randomCol].style.opacity = 0.3
+            alert('HIT!! CPU Go Again')
+            //console.log('This is a ship; fire again')
+            this.cpuMissle()
+        } else if (battleShip.playerGrid[randomRow][randomCol].getAttribute('class') === 'miss') {
+            alert('CPU Missed: Players Turn')
+            //console.log('missed target for cpu')
+        } else {
+            battleShip.playerGrid[randomRow][randomCol].style.opacity = 0.3
         }
-        //console.log('almost')
     },
     // select and listen to the space and check to see if the space is a ship or empty 
     fireMissle: function (e) {
@@ -152,3 +157,4 @@ battleShip.playerSpaces()
 battleShip.playerShips()
 //console.log(inputGuess)
 //console.log(battleShip.board)
+//battleShip.cpuMissle()
