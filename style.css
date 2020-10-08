@@ -60,12 +60,6 @@ body {
   padding: 2%;
   position: relative;
 }
-/* might not need
-.cpuShip:click {
-  border: 5px solid gray;
-  background-color: #2a4f6e;
-}
-*/
 .playerShip {
   display: inline-flex;
   flex-wrap: wrap;
