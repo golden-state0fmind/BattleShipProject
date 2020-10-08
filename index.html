@@ -13,13 +13,28 @@
     <div class='container'>
         <h1 class='cputitle'>Cpu<br> Board</h1>
         <div class='container1'></div>
+        <div class='dropdown'>
+            <h3>Game Instructions</h3>
+            <div class='dropdown-content'>
+                <ol>
+                    <li>Player will start the turn: Enter Coordinates below in red box.</li>
+                    <li>If you Hit your targets ship, fire again until you miss.</li>
+                    <li>Cpu will fire their missle until Cpu misses.</li>
+                    <li>Play until all of your opponents ships are sunk.</li>
+                    <li>Winner recieves trophy.</li>
+                </ol>
+            </div>
+        </div>
         <h1 class='playertitle'>Player<br> Board</h1>
         <div class='container2'></div>
     </div>
-    <form class='form' id='form' action='/'>
-        <input class='input' type='text' value='' placeholder="Fire Coordinates i.e 0-0">
-        <button type='submit' class='fireBtn'>Fire Missle!!</button>
-    </form>
+    <section class='container3'>
+        <form class='form' id='form' action='/'>
+            <input class='input' type='text' value='' placeholder='Fire Coordinates i.e 0-0'>
+            <button type='submit' class='fireBtn'>Fire Missle!!</button>
+        </form>
+    </section>
+
     <script src='app.js'></script>
 </body>
 
