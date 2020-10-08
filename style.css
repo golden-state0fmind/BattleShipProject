@@ -11,23 +11,24 @@ body {
 .container1 {
   display: flex;
   flex-wrap: wrap;
-  max-width: 401px;
+  width: 500px;
 }
 .container2 {
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
-  max-width: 401px;
-  margin-right: 25px;
+  width: 500px;
 }
 .form {
   display: flex;
   justify-content: flex-start;
-  padding-top: 1%;
+  padding: 1%;
   padding-left: 9.75%;
 }
 .input {
   border: 5px solid #ff0000;
+  padding-right: 10%;
+  margin-right: 25px;
 }
 .fireBtn {
   font-weight: bold;
@@ -41,12 +42,12 @@ body {
   flex-wrap: wrap;
   border: 5px solid gray;
   background-color: #2a4f6e;
-  height: 15px;
-  width: 13px;
+  height: 20px;
+  width: 20px;
   margin: 1px;
   padding: 2%;
   position: relative;
-  font-size: 12px;
+  font-size: 15px;
   text-align: start;
 }
 .playerSpace {
@@ -56,14 +57,12 @@ body {
   max-width: 401px;
   border: 5px solid gray;
   background-color: #3d6c96;
-  height: 15px;
-  width: 13px;
+  height: 20px;
+  width: 20px;
   margin: 1px;
   padding: 2%;
   position: relative;
-  font-size: 12px;
-  text-align: start;
-  font-size: 12px;
+  font-size: 15px;
   text-align: start;
 }
 .cpuShip {
@@ -71,12 +70,12 @@ body {
   flex-wrap: wrap;
   border: 5px solid gray;
   background-color: #e11500;
-  height: 15px;
-  width: 13px;
+  height: 20px;
+  width: 20px;
   margin: 1px;
   padding: 2%;
   position: relative;
-  font-size: 12px;
+  font-size: 15px;
   text-align: start;
 }
 .playerShip {
@@ -84,12 +83,12 @@ body {
   flex-wrap: wrap;
   border: 5px solid gray;
   background-color: #e11500;
-  height: 15px;
-  width: 13px;
+  height: 20px;
+  width: 20px;
   margin: 1px;
   padding: 2%;
   position: relative;
-  font-size: 12px;
+  font-size: 15px;
   text-align: start;
 }
 .ocean {
@@ -97,12 +96,12 @@ body {
   flex-wrap: wrap;
   border: 5px solid gray;
   background-color: #2a4f6e;
-  height: 15px;
-  width: 13px;
+  height: 20px;
+  width: 20px;
   margin: 1px;
   padding: 2%;
   position: relative;
-  font-size: 12px;
+  font-size: 15px;
   text-align: start;
 }
 .miss {
@@ -110,13 +109,14 @@ body {
   flex-wrap: wrap;
   border: 5px solid gray;
   background-color: #2a4f6e;
-  height: 15px;
-  width: 13px;
+  height: 20px;
+  width: 20px;
   margin: 1px;
   padding: 2%;
   position: relative;
   opacity: 0.2;
-  text-decoration: none;
+  font-size: 15px;
+  text-align: start;
 }
 .cputitle {
   border: 5px solid #7b4400;
