@@ -12,7 +12,6 @@ let battleShip = {
     // store the ships in an Array
     cpuGrid: [],
     playerGrid: [],
-    randomGuess: [],
     // generate the ships with values and classes
     cpuSpaces: function () {
         for (i = 0; i < 9; i++) {
@@ -40,11 +39,9 @@ let battleShip = {
                 player.push(playerSpace)
             }
             this.playerGrid.push(player)
-            this.randomGuess.push(player)
         }
     },
     cpuMissle: function () {
-        console.log(this.playerGrid)
         randomRow = Math.floor(Math.random() * 8)
         randomCol = Math.floor(Math.random() * 8)
         //console.log(randomRow)
@@ -146,7 +143,6 @@ let battleShip = {
         battleShip.playerGrid[7][1].setAttribute('class', 'playerShip')
         battleShip.playerGrid[8][1].setAttribute('class', 'playerShip')
     },
-
 }
 // listening for an input to compare coordinates on our grid
 form.addEventListener('submit', battleShip.fireMissle)
