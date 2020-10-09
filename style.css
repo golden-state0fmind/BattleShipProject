@@ -161,3 +161,19 @@ body {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+.cpuscore {
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+  font-size: 25px;
+  padding: 2%;
+  margin-right: 50px;
+}
+.playerscore {
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+  font-size: 25px;
+  padding: 2%;
+  margin-left: 500px;
+}
