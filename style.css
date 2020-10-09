@@ -19,11 +19,11 @@ body {
   flex-wrap: wrap;
   width: 500px;
 }
-.form {
+.container3 {
   display: flex;
   justify-content: flex-start;
   padding: 1%;
-  padding-left: 9.75%;
+  padding-left: 6.75%;
 }
 .input {
   border: 5px solid #ff0000;
@@ -34,6 +34,7 @@ body {
   font-weight: bold;
   background-color: #fff8e7;
   border: 5px solid #7b4400;
+  margin-top: 3%;
 }
 /* need to hide the ships and when hit reveal*/
 .cpuSpace {
@@ -136,4 +137,19 @@ body {
   font-size: 25px;
   background-color: #fff8e7;
   padding: 1%;
+}
+.dropdown {
+  position: relative;
+  display: inline block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff8e7;
+  min-width: 160px;
+  padding: 12px 16px;
+  z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
 }
