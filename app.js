@@ -6,7 +6,28 @@ let board2 = document.querySelector('.container2')
 let form = document.querySelector('form')
 let inputGuess = document.querySelector('input')
 // need the cpu to involve turn and randomizeguess when invoked maybe function at the end of the players miss 
+// adding scores to determine winner
+let cpuScore = document.querySelector('.cpuscore')
+let playerScore = document.querySelector('.playerscore')
+let sectionThree = document.querySelector('.container3')
+
+//console.log(playerScore, cpuScore)
+
 let battleShip = {
+    game: true,
+    cpuScore: 8,
+    playerScore: 8,
+    winner: function () {
+        if (battleShip.cpuScore === 0) {
+            // console.log('iam cpuwin')
+            alert('PLAYER WINS THE GAME!!')
+            game = false
+        } else if (battleShip.playerScore === 0) {
+            // console.log('iam playwin')
+            alert('CPU WINS THE GAME!!')
+            game = false
+        }
+    },
     // store the ships in an Array
     cpuGrid: [],
     playerGrid: [],
@@ -51,8 +72,11 @@ let battleShip = {
         //console.log(battleShip.playerGrid[randomRow][randomCol].getAttribute('class'))
         if (battleShip.playerGrid[randomRow][randomCol].getAttribute('class') === 'playerShip') {
             battleShip.playerGrid[randomRow][randomCol].style.opacity = 0.3
+            this.playerScore
+            this.playerScore -= 1
+            playerScore.innerHTML = `Player Ships: ${this.playerScore}`
             alert('HIT!! CPU Go Again')
-            //console.log('This is a ship;', battleShip.playerGrid[randomRow][randomCol])
+            this.winner()
             this.cpuMissle()
         } else if (battleShip.playerGrid[randomRow][randomCol].getAttribute('class') === 'miss') {
             alert('CPU Missed: Players Turn')
@@ -66,6 +90,7 @@ let battleShip = {
     fireMissle: function (e) {
         e.preventDefault()// prevents the form from leaving the page
         // the form returns an array so access the array 
+        battleShip.winner()
         if (!e.target[0].value.includes('-') ||
             !e.target[0].value.indexOf('id')) {
             console.log('I am off the board')
@@ -76,45 +101,69 @@ let battleShip = {
             battleShip.cpuGrid[0][0].style.opacity = 0.3
             document.getElementById(e.target[0].value).setAttribute('class', 'cpuShip')
             alert('HIT: Go again!!')
+            // console.log(battleShip.cpuScore)
+            battleShip.cpuScore--
+            cpuScore.innerHTML = `Cpu Ships: ${battleShip.cpuScore}`
             inputGuess.value = ''
         } else if (e.target[0].value === '0-1') {
             battleShip.cpuGrid[0][1].style.opacity = 0.3
             document.getElementById(e.target[0].value).setAttribute('class', 'cpuShip')
             alert('HIT: Go again!!')
+            battleShip.cpuScore--
+            cpuScore.innerHTML = `Cpu Ships: ${battleShip.cpuScore}`
+            console.log(battleShip.cpuScore)
             inputGuess.value = ''
         } else if (e.target[0].value === '0-2') {
             battleShip.cpuGrid[0][2].style.opacity = 0.3
             document.getElementById(e.target[0].value).setAttribute('class', 'cpuShip')
             alert('HIT: Go again!!')
+            battleShip.cpuScore--
+            cpuScore.innerHTML = `Cpu Ships: ${battleShip.cpuScore}`
+            console.log(battleShip.cpuScore)
             inputGuess.value = ''
         } else if (e.target[0].value === '4-8') {
             battleShip.cpuGrid[4][8].style.opacity = 0.3
             document.getElementById(e.target[0].value).setAttribute('class', 'cpuShip')
             alert('HIT: Go again!!')
+            battleShip.cpuScore--
+            cpuScore.innerHTML = `Cpu Ships: ${battleShip.cpuScore}`
+            console.log(battleShip.cpuScore)
             inputGuess.value = ''
         }
         else if (e.target[0].value === '5-8') {
             battleShip.cpuGrid[5][8].style.opacity = 0.3
             document.getElementById(e.target[0].value).setAttribute('class', 'cpuShip')
             alert('HIT: Go again!!')
+            battleShip.cpuScore--
+            cpuScore.innerHTML = `Cpu Ships: ${battleShip.cpuScore}`
+            console.log(battleShip.cpuScore)
             inputGuess.value = ''
         }
         else if (e.target[0].value === '6-8') {
             battleShip.cpuGrid[6][8].style.opacity = 0.3
             document.getElementById(e.target[0].value).setAttribute('class', 'cpuShip')
             alert('HIT: Go again!!')
+            battleShip.cpuScore--
+            cpuScore.innerHTML = `Cpu Ships: ${battleShip.cpuScore}`
+            console.log(battleShip.cpuScore)
             inputGuess.value = ''
         }
         else if (e.target[0].value === '7-8') {
             battleShip.cpuGrid[7][8].style.opacity = 0.3
             document.getElementById(e.target[0].value).setAttribute('class', 'cpuShip')
             alert('HIT: Go again!!')
+            battleShip.cpuScore--
+            cpuScore.innerHTML = `Cpu Ships: ${battleShip.cpuScore}`
+            console.log(battleShip.cpuScore)
             inputGuess.value = ''
         }
         else if (e.target[0].value === '8-8') {
             battleShip.cpuGrid[8][8].style.opacity = 0.3
             document.getElementById(e.target[0].value).setAttribute('class', 'cpuShip')
             alert('HIT: Go again!!')
+            battleShip.cpuScore--
+            cpuScore.innerHTML = `Cpu Ships: ${battleShip.cpuScore}`
+            console.log(battleShip.cpuScore)
             inputGuess.value = ''
         }
         else if (e.target[0].value) {
@@ -158,6 +207,3 @@ battleShip.cpuSpaces()
 battleShip.cpuShips()
 battleShip.playerSpaces()
 battleShip.playerShips()
-//console.log(inputGuess)
-//console.log(battleShip.board)
-//battleShip.cpuMissle()
