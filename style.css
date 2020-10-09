@@ -126,7 +126,10 @@ body {
   border-radius: 50%;
   text-align: center;
   font-size: 25px;
-  background-color: #fff8e7;
+  font-weight: lighter;
+  background-image: url(images/luke-southern-N5GCFcsVbys-unsplash.jpeg);
+  background-size: cover;
+  color: white;
   padding: 1%;
 }
 .playertitle {
@@ -136,7 +139,10 @@ body {
   margin-left: 300px;
   text-align: center;
   font-size: 25px;
-  background-color: #fff8e7;
+  font-weight: lighter;
+  background-image: url(images/luke-southern-N5GCFcsVbys-unsplash.jpeg);
+  background-size: cover;
+  color: white;
   padding: 1%;
 }
 .dropdown {
