@@ -11,8 +11,6 @@ let cpuScore = document.querySelector('.cpuscore')
 let playerScore = document.querySelector('.playerscore')
 let sectionThree = document.querySelector('.container3')
 
-//console.log(playerScore, cpuScore)
-
 let battleShip = {
     game: true,
     cpuScore: 8,
@@ -111,7 +109,7 @@ let battleShip = {
             alert('HIT: Go again!!')
             battleShip.cpuScore--
             cpuScore.innerHTML = `Cpu Ships: ${battleShip.cpuScore}`
-            console.log(battleShip.cpuScore)
+            // console.log(battleShip.cpuScore)
             inputGuess.value = ''
         } else if (e.target[0].value === '0-2') {
             battleShip.cpuGrid[0][2].style.opacity = 0.3
@@ -119,7 +117,7 @@ let battleShip = {
             alert('HIT: Go again!!')
             battleShip.cpuScore--
             cpuScore.innerHTML = `Cpu Ships: ${battleShip.cpuScore}`
-            console.log(battleShip.cpuScore)
+            // console.log(battleShip.cpuScore)
             inputGuess.value = ''
         } else if (e.target[0].value === '4-8') {
             battleShip.cpuGrid[4][8].style.opacity = 0.3
@@ -127,7 +125,7 @@ let battleShip = {
             alert('HIT: Go again!!')
             battleShip.cpuScore--
             cpuScore.innerHTML = `Cpu Ships: ${battleShip.cpuScore}`
-            console.log(battleShip.cpuScore)
+            // console.log(battleShip.cpuScore)
             inputGuess.value = ''
         }
         else if (e.target[0].value === '5-8') {
@@ -136,7 +134,7 @@ let battleShip = {
             alert('HIT: Go again!!')
             battleShip.cpuScore--
             cpuScore.innerHTML = `Cpu Ships: ${battleShip.cpuScore}`
-            console.log(battleShip.cpuScore)
+            // console.log(battleShip.cpuScore)
             inputGuess.value = ''
         }
         else if (e.target[0].value === '6-8') {
@@ -154,7 +152,7 @@ let battleShip = {
             alert('HIT: Go again!!')
             battleShip.cpuScore--
             cpuScore.innerHTML = `Cpu Ships: ${battleShip.cpuScore}`
-            console.log(battleShip.cpuScore)
+            // console.log(battleShip.cpuScore)
             inputGuess.value = ''
         }
         else if (e.target[0].value === '8-8') {
@@ -163,7 +161,7 @@ let battleShip = {
             alert('HIT: Go again!!')
             battleShip.cpuScore--
             cpuScore.innerHTML = `Cpu Ships: ${battleShip.cpuScore}`
-            console.log(battleShip.cpuScore)
+            // console.log(battleShip.cpuScore)
             inputGuess.value = ''
         }
         else if (e.target[0].value) {
